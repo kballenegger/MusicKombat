@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F6DF33C141C225E003091DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF33B141C225E003091DD /* UIKit.framework */; };
+		9F6DF33E141C225E003091DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF33D141C225E003091DD /* Foundation.framework */; };
+		9F6DF340141C225E003091DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF33F141C225E003091DD /* CoreGraphics.framework */; };
+		9F6DF346141C225E003091DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF344141C225E003091DD /* InfoPlist.strings */; };
+		9F6DF348141C225E003091DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF347141C225E003091DD /* main.m */; };
+		9F6DF34C141C225E003091DD /* MusicKombatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */; };
+		9F6DF34F141C225E003091DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */; };
+		9F6DF352141C225E003091DD /* MusicKombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF351141C225E003091DD /* MusicKombatViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9F6DF337141C225E003091DD /* MusicKombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicKombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6DF33B141C225E003091DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F6DF33D141C225E003091DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F6DF33F141C225E003091DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F6DF343141C225E003091DD /* MusicKombat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicKombat-Info.plist"; sourceTree = "<group>"; };
+		9F6DF345141C225E003091DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F6DF347141C225E003091DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F6DF349141C225E003091DD /* MusicKombat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicKombat-Prefix.pch"; sourceTree = "<group>"; };
+		9F6DF34A141C225E003091DD /* MusicKombatAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicKombatAppDelegate.h; sourceTree = "<group>"; };
+		9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicKombatAppDelegate.m; sourceTree = "<group>"; };
+		9F6DF34E141C225E003091DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9F6DF350141C225E003091DD /* MusicKombatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicKombatViewController.h; sourceTree = "<group>"; };
+		9F6DF351141C225E003091DD /* MusicKombatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicKombatViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F6DF334141C225E003091DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F6DF33C141C225E003091DD /* UIKit.framework in Frameworks */,
+				9F6DF33E141C225E003091DD /* Foundation.framework in Frameworks */,
+				9F6DF340141C225E003091DD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F6DF32C141C225E003091DD = {
+			isa = PBXGroup;
+			children = (
+				9F6DF341141C225E003091DD /* MusicKombat */,
+				9F6DF33A141C225E003091DD /* Frameworks */,
+				9F6DF338141C225E003091DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F6DF338141C225E003091DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF337141C225E003091DD /* MusicKombat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F6DF33A141C225E003091DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF33B141C225E003091DD /* UIKit.framework */,
+				9F6DF33D141C225E003091DD /* Foundation.framework */,
+				9F6DF33F141C225E003091DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F6DF341141C225E003091DD /* MusicKombat */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF34A141C225E003091DD /* MusicKombatAppDelegate.h */,
+				9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */,
+				9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */,
+				9F6DF350141C225E003091DD /* MusicKombatViewController.h */,
+				9F6DF351141C225E003091DD /* MusicKombatViewController.m */,
+				9F6DF342141C225E003091DD /* Supporting Files */,
+			);
+			path = MusicKombat;
+			sourceTree = "<group>";
+		};
+		9F6DF342141C225E003091DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF343141C225E003091DD /* MusicKombat-Info.plist */,
+				9F6DF344141C225E003091DD /* InfoPlist.strings */,
+				9F6DF347141C225E003091DD /* main.m */,
+				9F6DF349141C225E003091DD /* MusicKombat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F6DF336141C225E003091DD /* MusicKombat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F6DF355141C225E003091DD /* Build configuration list for PBXNativeTarget "MusicKombat" */;
+			buildPhases = (
+				9F6DF333141C225E003091DD /* Sources */,
+				9F6DF334141C225E003091DD /* Frameworks */,
+				9F6DF335141C225E003091DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicKombat;
+			productName = MusicKombat;
+			productReference = 9F6DF337141C225E003091DD /* MusicKombat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F6DF32E141C225E003091DD /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 9F6DF331141C225E003091DD /* Build configuration list for PBXProject "MusicKombat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9F6DF32C141C225E003091DD;
+			productRefGroup = 9F6DF338141C225E003091DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F6DF336141C225E003091DD /* MusicKombat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F6DF335141C225E003091DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F6DF346141C225E003091DD /* InfoPlist.strings in Resources */,
+				9F6DF34F141C225E003091DD /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F6DF333141C225E003091DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F6DF348141C225E003091DD /* main.m in Sources */,
+				9F6DF34C141C225E003091DD /* MusicKombatAppDelegate.m in Sources */,
+				9F6DF352141C225E003091DD /* MusicKombatViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9F6DF344141C225E003091DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F6DF345141C225E003091DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F6DF34E141C225E003091DD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F6DF353141C225E003091DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F6DF354141C225E003091DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F6DF356141C225E003091DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
+				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F6DF357141C225E003091DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
+				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F6DF331141C225E003091DD /* Build configuration list for PBXProject "MusicKombat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F6DF353141C225E003091DD /* Debug */,
+				9F6DF354141C225E003091DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F6DF355141C225E003091DD /* Build configuration list for PBXNativeTarget "MusicKombat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F6DF356141C225E003091DD /* Debug */,
+				9F6DF357141C225E003091DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F6DF32E141C225E003091DD /* Project object */;
+}
