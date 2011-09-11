@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SocketIoClient.h"
+#import "MusicKombatViewController.h"
+#import "MKAPIConnection.h"
 
-@interface MusicKombatAppDelegate : UIResponder <UIApplicationDelegate, SocketIoClientDelegate>
+@interface MusicKombatAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (retain, nonatomic) UIWindow *window;
-@property (retain) SocketIoClient *connection;
+@property (retain, nonatomic) IBOutlet UIWindow *window;
+
+@property (retain, nonatomic) MKAPIConnection *apiConnection;
+@property (retain, nonatomic) IBOutlet MusicKombatViewController *gameViewController;
+
+@property (retain, nonatomic) NSString *token;
+@property (retain, nonatomic) NSNumber *userId;
+
++ (MusicKombatAppDelegate *)sharedDelegate;
 
 @end

@@ -31,7 +31,6 @@
 		9F6DF3A1141C6A28003091DD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF3A0141C6A28003091DD /* OpenAL.framework */; };
 		9F6DF3A3141C6BD1003091DD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF3A2141C6BD1003091DD /* AudioToolbox.framework */; };
 		9F6DF3A6141C749A003091DD /* Card.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A5141C749A003091DD /* Card.mm */; };
-		9F6DF3A8141C7CD5003091DD /* MusicKombatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */; };
 		9F6DF3AA141C8428003091DD /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A9141C8428003091DD /* card.png */; };
 		9F6DF3AC141CA27B003091DD /* MKStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3AB141CA27B003091DD /* MKStack.c */; };
 		9F6DF3C1141CCA4E003091DD /* note_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3B9141CCA4E003091DD /* note_10.png */; };
@@ -53,6 +52,16 @@
 		9F6DF3DE141CD5A6003091DD /* right3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3D4141CD5A6003091DD /* right3.png */; };
 		9F6DF3DF141CD5A6003091DD /* right4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3D5141CD5A6003091DD /* right4.png */; };
 		9F6DF3E0141CD5A6003091DD /* right5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3D6141CD5A6003091DD /* right5.png */; };
+		9F6DF3EC141CE619003091DD /* MKAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3E9141CE619003091DD /* MKAPIConnection.m */; };
+		9F6DF3ED141CE619003091DD /* MKAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3EB141CE619003091DD /* MKAPIRequest.m */; };
+		9F6DF3FC141CE833003091DD /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3F1141CE833003091DD /* NSObject+SBJSON.m */; };
+		9F6DF3FD141CE833003091DD /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3F3141CE833003091DD /* NSString+SBJSON.m */; };
+		9F6DF3FE141CE833003091DD /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3F5141CE833003091DD /* SBJSON.m */; };
+		9F6DF3FF141CE833003091DD /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3F7141CE833003091DD /* SBJsonBase.m */; };
+		9F6DF400141CE833003091DD /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3F9141CE833003091DD /* SBJsonParser.m */; };
+		9F6DF401141CE833003091DD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3FB141CE833003091DD /* SBJsonWriter.m */; };
+		9F6DF40B141CE8A0003091DD /* CBTaggedURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF40A141CE8A0003091DD /* CBTaggedURLConnection.m */; };
+		9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF41A141D0319003091DD /* MusicKombat.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +106,6 @@
 		9F6DF3A2141C6BD1003091DD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9F6DF3A4141C749A003091DD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		9F6DF3A5141C749A003091DD /* Card.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Card.mm; sourceTree = "<group>"; };
-		9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicKombatStoryboard.storyboard; sourceTree = "<group>"; };
 		9F6DF3A9141C8428003091DD /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
 		9F6DF3AB141CA27B003091DD /* MKStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MKStack.c; sourceTree = "<group>"; };
 		9F6DF3AD141CA289003091DD /* MKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStack.h; sourceTree = "<group>"; };
@@ -121,6 +129,26 @@
 		9F6DF3D4141CD5A6003091DD /* right3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right3.png; sourceTree = "<group>"; };
 		9F6DF3D5141CD5A6003091DD /* right4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right4.png; sourceTree = "<group>"; };
 		9F6DF3D6141CD5A6003091DD /* right5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right5.png; sourceTree = "<group>"; };
+		9F6DF3E8141CE619003091DD /* MKAPIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAPIConnection.h; sourceTree = SOURCE_ROOT; };
+		9F6DF3E9141CE619003091DD /* MKAPIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAPIConnection.m; sourceTree = SOURCE_ROOT; };
+		9F6DF3EA141CE619003091DD /* MKAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAPIRequest.h; sourceTree = SOURCE_ROOT; };
+		9F6DF3EB141CE619003091DD /* MKAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAPIRequest.m; sourceTree = SOURCE_ROOT; };
+		9F6DF3EF141CE833003091DD /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		9F6DF3F0141CE833003091DD /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		9F6DF3F1141CE833003091DD /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		9F6DF3F2141CE833003091DD /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		9F6DF3F3141CE833003091DD /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		9F6DF3F4141CE833003091DD /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		9F6DF3F5141CE833003091DD /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		9F6DF3F6141CE833003091DD /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		9F6DF3F7141CE833003091DD /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		9F6DF3F8141CE833003091DD /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		9F6DF3F9141CE833003091DD /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		9F6DF3FA141CE833003091DD /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		9F6DF3FB141CE833003091DD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		9F6DF409141CE8A0003091DD /* CBTaggedURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTaggedURLConnection.h; sourceTree = "<group>"; };
+		9F6DF40A141CE8A0003091DD /* CBTaggedURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTaggedURLConnection.m; sourceTree = "<group>"; };
+		9F6DF41A141D0319003091DD /* MusicKombat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicKombat.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +211,6 @@
 			children = (
 				9F6DF34A141C225E003091DD /* MusicKombatAppDelegate.h */,
 				9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */,
-				9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */,
 				9F6DF350141C225E003091DD /* MusicKombatViewController.h */,
 				9F6DF351141C225E003091DD /* MusicKombatViewController.mm */,
 				9F6DF3A4141C749A003091DD /* Card.h */,
@@ -195,6 +222,7 @@
 				9F6DF3C9141CD516003091DD /* LifeBar.h */,
 				9F6DF3CA141CD516003091DD /* LifeBar.m */,
 				9F6DF342141C225E003091DD /* Supporting Files */,
+				9F6DF41A141D0319003091DD /* MusicKombat.xib */,
 			);
 			path = MusicKombat;
 			sourceTree = "<group>";
@@ -237,6 +265,13 @@
 		9F6DF386141C5AEF003091DD /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9F6DF3EE141CE833003091DD /* JSON */,
+				9F6DF3E8141CE619003091DD /* MKAPIConnection.h */,
+				9F6DF3E9141CE619003091DD /* MKAPIConnection.m */,
+				9F6DF3EA141CE619003091DD /* MKAPIRequest.h */,
+				9F6DF3EB141CE619003091DD /* MKAPIRequest.m */,
+				9F6DF409141CE8A0003091DD /* CBTaggedURLConnection.h */,
+				9F6DF40A141CE8A0003091DD /* CBTaggedURLConnection.m */,
 				9F6DF383141C5AEB003091DD /* CBContextualizedBasicAnimation.h */,
 				9F6DF384141C5AEB003091DD /* CBContextualizedBasicAnimation.m */,
 			);
@@ -294,6 +329,26 @@
 			path = ko_bar;
 			sourceTree = "<group>";
 		};
+		9F6DF3EE141CE833003091DD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF3EF141CE833003091DD /* JSON.h */,
+				9F6DF3F0141CE833003091DD /* NSObject+SBJSON.h */,
+				9F6DF3F1141CE833003091DD /* NSObject+SBJSON.m */,
+				9F6DF3F2141CE833003091DD /* NSString+SBJSON.h */,
+				9F6DF3F3141CE833003091DD /* NSString+SBJSON.m */,
+				9F6DF3F4141CE833003091DD /* SBJSON.h */,
+				9F6DF3F5141CE833003091DD /* SBJSON.m */,
+				9F6DF3F6141CE833003091DD /* SBJsonBase.h */,
+				9F6DF3F7141CE833003091DD /* SBJsonBase.m */,
+				9F6DF3F8141CE833003091DD /* SBJsonParser.h */,
+				9F6DF3F9141CE833003091DD /* SBJsonParser.m */,
+				9F6DF3FA141CE833003091DD /* SBJsonWriter.h */,
+				9F6DF3FB141CE833003091DD /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,7 +398,6 @@
 			files = (
 				9F6DF346141C225E003091DD /* InfoPlist.strings in Resources */,
 				9F6DF370141C45FB003091DD /* background.png in Resources */,
-				9F6DF3A8141C7CD5003091DD /* MusicKombatStoryboard.storyboard in Resources */,
 				9F6DF3AA141C8428003091DD /* card.png in Resources */,
 				9F6DF3C1141CCA4E003091DD /* note_10.png in Resources */,
 				9F6DF3C2141CCA4E003091DD /* note_14.png in Resources */,
@@ -363,6 +417,7 @@
 				9F6DF3DE141CD5A6003091DD /* right3.png in Resources */,
 				9F6DF3DF141CD5A6003091DD /* right4.png in Resources */,
 				9F6DF3E0141CD5A6003091DD /* right5.png in Resources */,
+				9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +444,15 @@
 				9F6DF3A6141C749A003091DD /* Card.mm in Sources */,
 				9F6DF3AC141CA27B003091DD /* MKStack.c in Sources */,
 				9F6DF3CB141CD517003091DD /* LifeBar.m in Sources */,
+				9F6DF3EC141CE619003091DD /* MKAPIConnection.m in Sources */,
+				9F6DF3ED141CE619003091DD /* MKAPIRequest.m in Sources */,
+				9F6DF3FC141CE833003091DD /* NSObject+SBJSON.m in Sources */,
+				9F6DF3FD141CE833003091DD /* NSString+SBJSON.m in Sources */,
+				9F6DF3FE141CE833003091DD /* SBJSON.m in Sources */,
+				9F6DF3FF141CE833003091DD /* SBJsonBase.m in Sources */,
+				9F6DF400141CE833003091DD /* SBJsonParser.m in Sources */,
+				9F6DF401141CE833003091DD /* SBJsonWriter.m in Sources */,
+				9F6DF40B141CE8A0003091DD /* CBTaggedURLConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +522,7 @@
 				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Developer/Extras/CoreAudio/PublicUtility/;
 				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +535,7 @@
 				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Developer/Extras/CoreAudio/PublicUtility/;
 				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

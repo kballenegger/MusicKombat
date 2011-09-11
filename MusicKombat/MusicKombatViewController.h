@@ -10,4 +10,6 @@
 
 @interface MusicKombatViewController : UIViewController
 
+- (void)startGame;
+
 @end

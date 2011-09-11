@@ -8,38 +8,54 @@
 
 #import "MusicKombatAppDelegate.h"
 
-@interface MusicKombatAppDelegate () {
+#import "MKAPIRequest.h"
+
+@interface MusicKombatAppDelegate () <MKAPIConnectionDelegate> {
 @private
-    SocketIoClient *connection;
+    MKAPIConnection *apiConnection;
+    
+    NSString *token;
+    NSNumber *userId;
+    
+    MusicKombatViewController *gameViewController;
 }
 @end
 
 @implementation MusicKombatAppDelegate
 
 @synthesize window = _window;
-@synthesize connection;
+@synthesize apiConnection;
+@synthesize gameViewController;
+@synthesize token, userId;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window.rootViewController = self.gameViewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
++ (MusicKombatAppDelegate *)sharedDelegate {
+    return (MusicKombatAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 
-    SocketIoClient *client = [[SocketIoClient alloc] initWithHost:@"dev.misomedia.com" port:1234];
-    client.delegate = self;
+    self.apiConnection = [[[MKAPIConnection alloc] initWithDelegate:self] autorelease];
+    MKAPIRequest *request = [[MKAPIRequest alloc] initWithSuffix:@"users/new"];
+    [apiConnection sendRequest:request];
+}
+
+- (void)didFailToReceiveAPIResponseForRequest:(MKAPIRequest *)request {
+}
+
+- (void)didReceiveAPIResponse:(NSDictionary *)response forRequest:(MKAPIRequest *)request {
+    NSLog(@"response on delegate %@", response);
     
-    [client connect];
-    
-    [client send:@"Hello Socket.IO" isJSON:NO];
-
-}
-
-- (void)socketIoClientDidConnect:(SocketIoClient *)client {
-    NSLog(@"Connected.");
-}
-
-- (void)socketIoClientDidDisconnect:(SocketIoClient *)client {
-    NSLog(@"Disconnected.");
-}
-
-- (void)socketIoClient:(SocketIoClient *)client didReceiveMessage:(NSString *)message isJSON:(BOOL)isJSON {
-    NSLog(@"Received: %@", message);
+    if ([request.suffix isEqualToString:@"users/new"]) {
+        self.token = [response objectForKey:@"auth_token"];
+        self.userId = [response objectForKey:@"id"];
+        [self.gameViewController startGame];
+    }
 }
 
 @end
