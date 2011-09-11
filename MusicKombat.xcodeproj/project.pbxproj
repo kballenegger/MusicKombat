@@ -64,6 +64,10 @@
 		9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF41A141D0319003091DD /* MusicKombat.xib */; };
 		9F6DF424141D0A04003091DD /* music_kombat_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF423141D0A04003091DD /* music_kombat_icon.png */; };
 		9F6DF426141D0A1C003091DD /* music_kombat_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF425141D0A1C003091DD /* music_kombat_icon.png */; };
+		9F6DF428141D19F7003091DD /* note_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF427141D19F7003091DD /* note_12.png */; };
+		9F6DF42C141D1B96003091DD /* menu_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF429141D1B96003091DD /* menu_screen.png */; };
+		9F6DF42D141D1B96003091DD /* robinson_win.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF42A141D1B96003091DD /* robinson_win.png */; };
+		9F6DF42E141D1B96003091DD /* ziggy_win.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF42B141D1B96003091DD /* ziggy_win.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +157,10 @@
 		9F6DF41A141D0319003091DD /* MusicKombat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicKombat.xib; sourceTree = "<group>"; };
 		9F6DF423141D0A04003091DD /* music_kombat_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = music_kombat_icon.png; path = ../music_kombat_icon.png; sourceTree = "<group>"; };
 		9F6DF425141D0A1C003091DD /* music_kombat_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_kombat_icon.png; sourceTree = "<group>"; };
+		9F6DF427141D19F7003091DD /* note_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_12.png; sourceTree = "<group>"; };
+		9F6DF429141D1B96003091DD /* menu_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_screen.png; sourceTree = "<group>"; };
+		9F6DF42A141D1B96003091DD /* robinson_win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robinson_win.png; sourceTree = "<group>"; };
+		9F6DF42B141D1B96003091DD /* ziggy_win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ziggy_win.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +270,9 @@
 				9F6DF3CC141CD5A6003091DD /* ko_bar */,
 				9F6DF3B8141CCA4E003091DD /* notes */,
 				9F6DF3A9141C8428003091DD /* card.png */,
+				9F6DF429141D1B96003091DD /* menu_screen.png */,
+				9F6DF42A141D1B96003091DD /* robinson_win.png */,
+				9F6DF42B141D1B96003091DD /* ziggy_win.png */,
 				9F6DF423141D0A04003091DD /* music_kombat_icon.png */,
 				9F6DF36F141C45FB003091DD /* background.png */,
 			);
@@ -307,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6DF3B9141CCA4E003091DD /* note_10.png */,
+				9F6DF427141D19F7003091DD /* note_12.png */,
 				9F6DF3BA141CCA4E003091DD /* note_14.png */,
 				9F6DF3BB141CCA4E003091DD /* note_16.png */,
 				9F6DF3BC141CCA4E003091DD /* note_17.png */,
@@ -426,6 +438,10 @@
 				9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */,
 				9F6DF424141D0A04003091DD /* music_kombat_icon.png in Resources */,
 				9F6DF426141D0A1C003091DD /* music_kombat_icon.png in Resources */,
+				9F6DF428141D19F7003091DD /* note_12.png in Resources */,
+				9F6DF42C141D1B96003091DD /* menu_screen.png in Resources */,
+				9F6DF42D141D1B96003091DD /* robinson_win.png in Resources */,
+				9F6DF42E141D1B96003091DD /* ziggy_win.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

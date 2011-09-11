@@ -54,6 +54,8 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     SocketIoClient *connection;
     
     NSDictionary *gameResponse;
+    
+    BOOL gameOver;
 }
 
 
@@ -177,7 +179,12 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     [apiConnection sendRequest:request];
 
     rightBar.value = rightBar.value + 1;
-    [self performSelectorOnMainThread:@selector(next) withObject:nil waitUntilDone:NO];
+    
+    if (rightBar.value == 5) {
+        [self performSelectorOnMainThread:@selector(didWin) withObject:nil waitUntilDone:NO];
+    } else {
+        [self performSelectorOnMainThread:@selector(next) withObject:nil waitUntilDone:NO];
+    }
 }
 
 - (void)next {
@@ -238,11 +245,41 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 }
 
 - (void)didLose {
+    NSLog(@"LOST");
+    if (gameOver) return;
+    gameOver = YES;
     
+    self.activeCard = nil;
+    
+    CBContextualizedBasicAnimation *fadeInAnimation = [CBContextualizedBasicAnimation animationWithKeyPath:@"opacity"];
+    fadeInAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    fadeInAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    fadeInAnimation.duration = kMusicKombatDefaultAnimationDuration;
+    fadeInAnimation.removedOnCompletion = NO;
+    fadeInAnimation.fillMode = kCAFillModeForwards;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ziggy_win"]];
+    [imageView.layer addAnimation:fadeInAnimation forKey:@"opacity"];
+    [self.view addSubview:imageView];
 }
 
 - (void)didWin {
+    NSLog(@"WON");
+    if (gameOver) return;
+    gameOver = YES;
     
+    self.activeCard = nil;
+    
+    CBContextualizedBasicAnimation *fadeInAnimation = [CBContextualizedBasicAnimation animationWithKeyPath:@"opacity"];
+    fadeInAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    fadeInAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    fadeInAnimation.duration = kMusicKombatDefaultAnimationDuration;
+    fadeInAnimation.removedOnCompletion = NO;
+    fadeInAnimation.fillMode = kCAFillModeForwards;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"robinson_win"]];
+    [imageView.layer addAnimation:fadeInAnimation forKey:@"opacity"];
+    [self.view addSubview:imageView];
 }
 
 - (void)dealloc {
@@ -277,6 +314,9 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
             } else if([action isEqualToString:@"score_update"]) {
                 NSNumber *opponentScore = [[messageDict objectForKey:@"game"] objectForKey:(((NSNumber *)[gameResponse objectForKey:@"opponent_id"]).intValue ? @"losses": @"wins")];
                 leftBar.value = opponentScore.intValue;
+                if (opponentScore.intValue >=5) {
+                    [self performSelectorOnMainThread:@selector(didLose) withObject:nil waitUntilDone:NO];
+                }
             }
         }
     }
