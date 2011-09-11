@@ -3,7 +3,7 @@
 //  MusicKombat
 //
 //  Created by Kenneth Ballenegger on 9/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Azure Talon. All rights reserved.
 //
 
 #import "CardView.h"
@@ -22,9 +22,8 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:10.0f];
-    [[UIColor whiteColor] set];
-    [path fill];
+    UIImage *cardImage = [UIImage imageNamed:@"card"];
+    [cardImage drawInRect:self.bounds];
 }
 
 @end

@@ -17,7 +17,8 @@
 
 #define kMusicKombatHideViewAnimationContext @"kMusicKombatHideViewAnimationContext"
 
-#define kMusicKombatDefaultAnimationDuration 0.2555
+#define kMusicKombatDefaultAnimationDuration 0.3555
+#define kMusicKombatCardFrame CGRectMake(24, 156, 972, 492)
 
 @interface MusicKombatViewController () <MPDADelegateProtocol, CardDelegate> {
 @private
@@ -48,6 +49,8 @@
 }
 
 - (void)awakeFromNib {
+//    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(next) userInfo:nil repeats:YES];
+    
     
     pitchDetector = [[AudioInput alloc] initWithDelegate:self];
     
@@ -57,54 +60,7 @@
     Card *card = [[Card alloc] init];
     card.delegate = self;
     
-    CardView *newView = [[CardView alloc] initWithFrame:CGRectMake(48, 66, 384, 221)];
-    CALayer *newLayer = newView.layer;
-    
-    CGPoint newToPosition = newView.center;
-    CGPoint newFromPosition = newToPosition;
-    
-    newFromPosition.x += 480;
-    
-    CABasicAnimation *slideInAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    slideInAnimation.fromValue = [NSValue valueWithCGPoint:newFromPosition];
-    slideInAnimation.toValue = [NSValue valueWithCGPoint:newToPosition];
-    slideInAnimation.duration = kMusicKombatDefaultAnimationDuration;
-    slideInAnimation.removedOnCompletion = NO;
-    slideInAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseInEaseOut];
-    slideInAnimation.fillMode = kCAFillModeForwards;
-    
-    [self.view addSubview:newView];
-    [newLayer addAnimation:slideInAnimation forKey:@"position"];
-    
-    card.cardView = [newView autorelease];
-    self.activeCard = [card autorelease];
-}
-
-- (void)pitchDetected:(MPDA_RESULT)result {
-    [self.activeCard pitchDetected:result];
-}
-
-- (void)cardCompleted {
-    [self next];
-}
-
-- (void)next {
-    
-    NSLog(@"moviinnng on");
-
-    Card *oldCard = self.activeCard;
-    
-    Card *newCard = [[Card alloc] init];
-    newCard.delegate = self;
-    
-    self.activeCard = newCard;
-    
-    // Replace view with animation
-    
-    CardView *oldView = oldCard.cardView;
-    CALayer *oldLayer = oldView.layer;
-    
-    CardView *newView = [[CardView alloc] initWithFrame:oldView.frame];
+    CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
     CALayer *newLayer = newView.layer;
     
     CGPoint newToPosition = newView.center;
@@ -123,7 +79,55 @@
     [self.view addSubview:newView];
     [newLayer addAnimation:slideInAnimation forKey:@"position"];
     
-    newCard.cardView = [newView autorelease];
+    card.cardView = newView;
+    [newView autorelease];
+    self.activeCard = [card autorelease];
+}
+
+- (void)pitchDetected:(MPDA_RESULT)result {
+    [self.activeCard pitchDetected:result];
+}
+
+- (void)cardCompleted {
+    [self performSelectorOnMainThread:@selector(next) withObject:nil waitUntilDone:NO];
+}
+
+- (void)next {
+    
+    NSLog(@"moviinnng on");
+
+    Card *oldCard = [self.activeCard retain]; // Keep it around long enough for the animation to happen
+    
+    Card *newCard = [[[Card alloc] init] autorelease];
+    newCard.delegate = self;
+    
+    self.activeCard = newCard;
+    
+    // Replace view with animation
+    
+    CardView *oldView = oldCard.cardView;
+    CALayer *oldLayer = oldView.layer;
+    
+    CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
+    CALayer *newLayer = newView.layer;
+    
+    CGPoint newToPosition = newView.center;
+    CGPoint newFromPosition = newToPosition;
+    
+    newFromPosition.x += 1024;
+    
+    CABasicAnimation *slideInAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    slideInAnimation.fromValue = [NSValue valueWithCGPoint:newFromPosition];
+    slideInAnimation.toValue = [NSValue valueWithCGPoint:newToPosition];
+    slideInAnimation.duration = kMusicKombatDefaultAnimationDuration;
+    slideInAnimation.removedOnCompletion = NO;
+    slideInAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseInEaseOut];
+    slideInAnimation.fillMode = kCAFillModeForwards;
+    
+    [self.view addSubview:newView];
+    [newLayer addAnimation:slideInAnimation forKey:@"position"];
+    
+    newCard.cardView = newView;
     
     CGPoint oldFromPosition = oldView.center;
     CGPoint oldToPosition = oldFromPosition;
@@ -141,7 +145,6 @@
     slideOutAnimation.context = oldView;
     
     [oldLayer addAnimation:slideOutAnimation forKey:@"position"];
-
 }
 
 - (void)dealloc {
