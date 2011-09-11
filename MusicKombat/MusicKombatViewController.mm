@@ -49,8 +49,6 @@
 }
 
 - (void)awakeFromNib {
-//    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(next) userInfo:nil repeats:YES];
-    
     
     pitchDetector = [[AudioInput alloc] initWithDelegate:self];
     

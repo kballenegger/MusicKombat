@@ -33,6 +33,7 @@
 		9F6DF3A6141C749A003091DD /* Card.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A5141C749A003091DD /* Card.mm */; };
 		9F6DF3A8141C7CD5003091DD /* MusicKombatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */; };
 		9F6DF3AA141C8428003091DD /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A9141C8428003091DD /* card.png */; };
+		9F6DF3AC141CA27B003091DD /* MKStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3AB141CA27B003091DD /* MKStack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,8 @@
 		9F6DF3A5141C749A003091DD /* Card.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Card.mm; sourceTree = "<group>"; };
 		9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicKombatStoryboard.storyboard; sourceTree = "<group>"; };
 		9F6DF3A9141C8428003091DD /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
+		9F6DF3AB141CA27B003091DD /* MKStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MKStack.c; sourceTree = "<group>"; };
+		9F6DF3AD141CA289003091DD /* MKStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStack.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				9F6DF351141C225E003091DD /* MusicKombatViewController.mm */,
 				9F6DF3A4141C749A003091DD /* Card.h */,
 				9F6DF3A5141C749A003091DD /* Card.mm */,
+				9F6DF3AD141CA289003091DD /* MKStack.h */,
+				9F6DF3AB141CA27B003091DD /* MKStack.c */,
 				9F6DF372141C561F003091DD /* CardView.h */,
 				9F6DF373141C561F003091DD /* CardView.m */,
 				9F6DF342141C225E003091DD /* Supporting Files */,
@@ -289,6 +294,7 @@
 				9F6DF39E141C69C6003091DD /* CADebugMacros.cpp in Sources */,
 				9F6DF39F141C69C6003091DD /* CAXException.cpp in Sources */,
 				9F6DF3A6141C749A003091DD /* Card.mm in Sources */,
+				9F6DF3AC141CA27B003091DD /* MKStack.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
