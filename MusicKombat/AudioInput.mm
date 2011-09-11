@@ -34,7 +34,7 @@ double				SNAC_results[SNAC_buf_length];
 int					SNAC_SNAC_peak_idxs;
 double				SNAC_peak_vals;
 const double		SNAC_abs_cutoff = 0.75;
-const double		SNAC_peak_ratio_cutoff = 0.9375;
+const double		SNAC_peak_ratio_cutoff = 0.8375;
 const int			SNAC_num_scored_notes = 72;
 double				SNAC_note_scores[SNAC_num_scored_notes];//from -42 to +54
 const int			SNAC_low_note = -42;

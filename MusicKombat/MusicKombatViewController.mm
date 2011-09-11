@@ -55,11 +55,11 @@
     
     // First card
     
-    Card *card = [[Card alloc] init];
-    card.delegate = self;
-    
     CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
     CALayer *newLayer = newView.layer;
+
+    Card *card = [[Card alloc] initWithCardView:newView];
+    card.delegate = self;
     
     CGPoint newToPosition = newView.center;
     CGPoint newFromPosition = newToPosition;
@@ -77,7 +77,6 @@
     [self.view addSubview:newView];
     [newLayer addAnimation:slideInAnimation forKey:@"position"];
     
-    card.cardView = newView;
     [newView autorelease];
     self.activeCard = [card autorelease];
 }
@@ -96,11 +95,6 @@
 
     Card *oldCard = [self.activeCard retain]; // Keep it around long enough for the animation to happen
     
-    Card *newCard = [[[Card alloc] init] autorelease];
-    newCard.delegate = self;
-    
-    self.activeCard = newCard;
-    
     // Replace view with animation
     
     CardView *oldView = oldCard.cardView;
@@ -108,7 +102,12 @@
     
     CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
     CALayer *newLayer = newView.layer;
+
+    Card *newCard = [[[Card alloc] initWithCardView:newView] autorelease];
+    newCard.delegate = self;
     
+    self.activeCard = newCard;
+
     CGPoint newToPosition = newView.center;
     CGPoint newFromPosition = newToPosition;
     
@@ -124,8 +123,6 @@
     
     [self.view addSubview:newView];
     [newLayer addAnimation:slideInAnimation forKey:@"position"];
-    
-    newCard.cardView = newView;
     
     CGPoint oldFromPosition = oldView.center;
     CGPoint oldToPosition = oldFromPosition;

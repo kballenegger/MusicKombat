@@ -17,6 +17,8 @@
 @interface Card : NSObject <MPDADelegateProtocol>
 
 @property (nonatomic, assign) id <CardDelegate> delegate;
-@property (nonatomic, retain) CardView *cardView;
+@property (nonatomic, readonly) CardView *cardView;
+
+- (id)initWithCardView:(CardView *)cardView;
 
 @end
