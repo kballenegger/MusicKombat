@@ -13,8 +13,25 @@
 		9F6DF346141C225E003091DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF344141C225E003091DD /* InfoPlist.strings */; };
 		9F6DF348141C225E003091DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF347141C225E003091DD /* main.m */; };
 		9F6DF34C141C225E003091DD /* MusicKombatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */; };
-		9F6DF34F141C225E003091DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */; };
-		9F6DF352141C225E003091DD /* MusicKombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF351141C225E003091DD /* MusicKombatViewController.m */; };
+		9F6DF352141C225E003091DD /* MusicKombatViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF351141C225E003091DD /* MusicKombatViewController.mm */; };
+		9F6DF35E141C264E003091DD /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF359141C264E003091DD /* AsyncSocket.m */; };
+		9F6DF35F141C264E003091DD /* SocketIoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF35B141C264E003091DD /* SocketIoClient.m */; };
+		9F6DF360141C264E003091DD /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF35D141C264E003091DD /* WebSocket.m */; };
+		9F6DF363141C275C003091DD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF362141C275C003091DD /* CFNetwork.framework */; };
+		9F6DF370141C45FB003091DD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF36F141C45FB003091DD /* background.png */; };
+		9F6DF374141C561F003091DD /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF373141C561F003091DD /* CardView.m */; };
+		9F6DF385141C5AEB003091DD /* CBContextualizedBasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF384141C5AEB003091DD /* CBContextualizedBasicAnimation.m */; };
+		9F6DF388141C5C9A003091DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF387141C5C9A003091DD /* QuartzCore.framework */; };
+		9F6DF391141C687F003091DD /* AudioInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF38E141C687F003091DD /* AudioInput.mm */; };
+		9F6DF392141C687F003091DD /* r2intFFT.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF390141C687F003091DD /* r2intFFT.mm */; };
+		9F6DF395141C68A0003091DD /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF394141C68A0003091DD /* CoreAudio.framework */; };
+		9F6DF398141C697B003091DD /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF396141C697B003091DD /* CAStreamBasicDescription.cpp */; };
+		9F6DF39E141C69C6003091DD /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF399141C69C6003091DD /* CADebugMacros.cpp */; };
+		9F6DF39F141C69C6003091DD /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF39C141C69C6003091DD /* CAXException.cpp */; };
+		9F6DF3A1141C6A28003091DD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF3A0141C6A28003091DD /* OpenAL.framework */; };
+		9F6DF3A3141C6BD1003091DD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6DF3A2141C6BD1003091DD /* AudioToolbox.framework */; };
+		9F6DF3A6141C749A003091DD /* Card.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A5141C749A003091DD /* Card.mm */; };
+		9F6DF3A8141C7CD5003091DD /* MusicKombatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +45,38 @@
 		9F6DF349141C225E003091DD /* MusicKombat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicKombat-Prefix.pch"; sourceTree = "<group>"; };
 		9F6DF34A141C225E003091DD /* MusicKombatAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicKombatAppDelegate.h; sourceTree = "<group>"; };
 		9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicKombatAppDelegate.m; sourceTree = "<group>"; };
-		9F6DF34E141C225E003091DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9F6DF350141C225E003091DD /* MusicKombatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicKombatViewController.h; sourceTree = "<group>"; };
-		9F6DF351141C225E003091DD /* MusicKombatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicKombatViewController.m; sourceTree = "<group>"; };
+		9F6DF351141C225E003091DD /* MusicKombatViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MusicKombatViewController.mm; sourceTree = "<group>"; };
+		9F6DF358141C264E003091DD /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		9F6DF359141C264E003091DD /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		9F6DF35A141C264E003091DD /* SocketIoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIoClient.h; sourceTree = "<group>"; };
+		9F6DF35B141C264E003091DD /* SocketIoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIoClient.m; sourceTree = "<group>"; };
+		9F6DF35C141C264E003091DD /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
+		9F6DF35D141C264E003091DD /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocket.m; sourceTree = "<group>"; };
+		9F6DF362141C275C003091DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9F6DF36F141C45FB003091DD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9F6DF372141C561F003091DD /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		9F6DF373141C561F003091DD /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		9F6DF383141C5AEB003091DD /* CBContextualizedBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBContextualizedBasicAnimation.h; sourceTree = "<group>"; };
+		9F6DF384141C5AEB003091DD /* CBContextualizedBasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBContextualizedBasicAnimation.m; sourceTree = "<group>"; };
+		9F6DF387141C5C9A003091DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9F6DF38D141C687F003091DD /* AudioInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioInput.h; path = MusicKombat/AudioInput.h; sourceTree = "<group>"; };
+		9F6DF38E141C687F003091DD /* AudioInput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioInput.mm; path = MusicKombat/AudioInput.mm; sourceTree = "<group>"; };
+		9F6DF38F141C687F003091DD /* r2intFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = r2intFFT.h; path = MusicKombat/r2intFFT.h; sourceTree = "<group>"; };
+		9F6DF390141C687F003091DD /* r2intFFT.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = r2intFFT.mm; path = MusicKombat/r2intFFT.mm; sourceTree = "<group>"; };
+		9F6DF394141C68A0003091DD /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		9F6DF396141C697B003091DD /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAStreamBasicDescription.cpp; path = MusicKombat/CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		9F6DF397141C697B003091DD /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAStreamBasicDescription.h; path = MusicKombat/CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		9F6DF399141C69C6003091DD /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADebugMacros.cpp; path = MusicKombat/CADebugMacros.cpp; sourceTree = "<group>"; };
+		9F6DF39A141C69C6003091DD /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugMacros.h; path = MusicKombat/CADebugMacros.h; sourceTree = "<group>"; };
+		9F6DF39B141C69C6003091DD /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAMath.h; path = MusicKombat/CAMath.h; sourceTree = "<group>"; };
+		9F6DF39C141C69C6003091DD /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAXException.cpp; path = MusicKombat/CAXException.cpp; sourceTree = "<group>"; };
+		9F6DF39D141C69C6003091DD /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAXException.h; path = MusicKombat/CAXException.h; sourceTree = "<group>"; };
+		9F6DF3A0141C6A28003091DD /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		9F6DF3A2141C6BD1003091DD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9F6DF3A4141C749A003091DD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		9F6DF3A5141C749A003091DD /* Card.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Card.mm; sourceTree = "<group>"; };
+		9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicKombatStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6DF3A3141C6BD1003091DD /* AudioToolbox.framework in Frameworks */,
+				9F6DF3A1141C6A28003091DD /* OpenAL.framework in Frameworks */,
+				9F6DF395141C68A0003091DD /* CoreAudio.framework in Frameworks */,
+				9F6DF388141C5C9A003091DD /* QuartzCore.framework in Frameworks */,
+				9F6DF363141C275C003091DD /* CFNetwork.framework in Frameworks */,
 				9F6DF33C141C225E003091DD /* UIKit.framework in Frameworks */,
 				9F6DF33E141C225E003091DD /* Foundation.framework in Frameworks */,
 				9F6DF340141C225E003091DD /* CoreGraphics.framework in Frameworks */,
@@ -50,9 +101,13 @@
 		9F6DF32C141C225E003091DD = {
 			isa = PBXGroup;
 			children = (
+				9F6DF393141C6885003091DD /* Pitch Detection */,
+				9F6DF361141C2653003091DD /* SocketIO */,
+				9F6DF386141C5AEF003091DD /* Other */,
 				9F6DF341141C225E003091DD /* MusicKombat */,
 				9F6DF33A141C225E003091DD /* Frameworks */,
 				9F6DF338141C225E003091DD /* Products */,
+				9F6DF371141C4600003091DD /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +122,11 @@
 		9F6DF33A141C225E003091DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F6DF3A2141C6BD1003091DD /* AudioToolbox.framework */,
+				9F6DF3A0141C6A28003091DD /* OpenAL.framework */,
+				9F6DF394141C68A0003091DD /* CoreAudio.framework */,
+				9F6DF387141C5C9A003091DD /* QuartzCore.framework */,
+				9F6DF362141C275C003091DD /* CFNetwork.framework */,
 				9F6DF33B141C225E003091DD /* UIKit.framework */,
 				9F6DF33D141C225E003091DD /* Foundation.framework */,
 				9F6DF33F141C225E003091DD /* CoreGraphics.framework */,
@@ -79,9 +139,13 @@
 			children = (
 				9F6DF34A141C225E003091DD /* MusicKombatAppDelegate.h */,
 				9F6DF34B141C225E003091DD /* MusicKombatAppDelegate.m */,
-				9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */,
+				9F6DF3A7141C7CD5003091DD /* MusicKombatStoryboard.storyboard */,
 				9F6DF350141C225E003091DD /* MusicKombatViewController.h */,
-				9F6DF351141C225E003091DD /* MusicKombatViewController.m */,
+				9F6DF351141C225E003091DD /* MusicKombatViewController.mm */,
+				9F6DF3A4141C749A003091DD /* Card.h */,
+				9F6DF3A5141C749A003091DD /* Card.mm */,
+				9F6DF372141C561F003091DD /* CardView.h */,
+				9F6DF373141C561F003091DD /* CardView.m */,
 				9F6DF342141C225E003091DD /* Supporting Files */,
 			);
 			path = MusicKombat;
@@ -96,6 +160,55 @@
 				9F6DF349141C225E003091DD /* MusicKombat-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F6DF361141C2653003091DD /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF358141C264E003091DD /* AsyncSocket.h */,
+				9F6DF359141C264E003091DD /* AsyncSocket.m */,
+				9F6DF35A141C264E003091DD /* SocketIoClient.h */,
+				9F6DF35B141C264E003091DD /* SocketIoClient.m */,
+				9F6DF35C141C264E003091DD /* WebSocket.h */,
+				9F6DF35D141C264E003091DD /* WebSocket.m */,
+			);
+			name = SocketIO;
+			sourceTree = "<group>";
+		};
+		9F6DF371141C4600003091DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF36F141C45FB003091DD /* background.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9F6DF386141C5AEF003091DD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF383141C5AEB003091DD /* CBContextualizedBasicAnimation.h */,
+				9F6DF384141C5AEB003091DD /* CBContextualizedBasicAnimation.m */,
+			);
+			name = Other;
+			path = MusicKombat;
+			sourceTree = "<group>";
+		};
+		9F6DF393141C6885003091DD /* Pitch Detection */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DF399141C69C6003091DD /* CADebugMacros.cpp */,
+				9F6DF39A141C69C6003091DD /* CADebugMacros.h */,
+				9F6DF39B141C69C6003091DD /* CAMath.h */,
+				9F6DF39C141C69C6003091DD /* CAXException.cpp */,
+				9F6DF39D141C69C6003091DD /* CAXException.h */,
+				9F6DF396141C697B003091DD /* CAStreamBasicDescription.cpp */,
+				9F6DF397141C697B003091DD /* CAStreamBasicDescription.h */,
+				9F6DF38D141C687F003091DD /* AudioInput.h */,
+				9F6DF38E141C687F003091DD /* AudioInput.mm */,
+				9F6DF38F141C687F003091DD /* r2intFFT.h */,
+				9F6DF390141C687F003091DD /* r2intFFT.mm */,
+			);
+			name = "Pitch Detection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F6DF346141C225E003091DD /* InfoPlist.strings in Resources */,
-				9F6DF34F141C225E003091DD /* MainStoryboard.storyboard in Resources */,
+				9F6DF370141C45FB003091DD /* background.png in Resources */,
+				9F6DF3A8141C7CD5003091DD /* MusicKombatStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +273,18 @@
 			files = (
 				9F6DF348141C225E003091DD /* main.m in Sources */,
 				9F6DF34C141C225E003091DD /* MusicKombatAppDelegate.m in Sources */,
-				9F6DF352141C225E003091DD /* MusicKombatViewController.m in Sources */,
+				9F6DF352141C225E003091DD /* MusicKombatViewController.mm in Sources */,
+				9F6DF35E141C264E003091DD /* AsyncSocket.m in Sources */,
+				9F6DF35F141C264E003091DD /* SocketIoClient.m in Sources */,
+				9F6DF360141C264E003091DD /* WebSocket.m in Sources */,
+				9F6DF374141C561F003091DD /* CardView.m in Sources */,
+				9F6DF385141C5AEB003091DD /* CBContextualizedBasicAnimation.m in Sources */,
+				9F6DF391141C687F003091DD /* AudioInput.mm in Sources */,
+				9F6DF392141C687F003091DD /* r2intFFT.mm in Sources */,
+				9F6DF398141C697B003091DD /* CAStreamBasicDescription.cpp in Sources */,
+				9F6DF39E141C69C6003091DD /* CADebugMacros.cpp in Sources */,
+				9F6DF39F141C69C6003091DD /* CAXException.cpp in Sources */,
+				9F6DF3A6141C749A003091DD /* Card.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,14 +299,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9F6DF34D141C225E003091DD /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F6DF34E141C225E003091DD /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -190,7 +307,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -207,6 +323,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -215,7 +332,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -226,6 +342,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -235,6 +352,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Developer/Extras/CoreAudio/PublicUtility/;
 				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -246,6 +364,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicKombat/MusicKombat-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Developer/Extras/CoreAudio/PublicUtility/;
 				INFOPLIST_FILE = "MusicKombat/MusicKombat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
