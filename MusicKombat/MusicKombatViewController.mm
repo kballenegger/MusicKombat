@@ -63,6 +63,9 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 
 - (void)next;
 
+- (void)didLose;
+- (void)didWin;
+
 @end
 
 @implementation MusicKombatViewController
@@ -164,7 +167,15 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 }
 
 - (void)cardCompleted {
-    leftBar.value = leftBar.value + 1;
+    
+    MKAPIConnection *apiConnection = [MusicKombatAppDelegate sharedDelegate].apiConnection;
+    
+    MKAPIRequest *request = [MKAPIRequest requestWithSuffix:[NSString stringWithFormat:@"games/%@/%@", [gameResponse objectForKey:@"id"], (((NSNumber *)[gameResponse objectForKey:@"opponent_id"]).intValue ? @"win": @"loss")]];
+    [request appendQueryArgumentKey:@"user_id" value:[NSString stringWithFormat:@"%i", [MusicKombatAppDelegate sharedDelegate].userId.intValue]];
+    [request appendQueryArgumentKey:@"auth_token" value:[MusicKombatAppDelegate sharedDelegate].token];
+    [request appendBodyArgumentKey:@"brandon" value:@"sucks_cock"]; // Fool stupid server into thinking it's a POST request
+    [apiConnection sendRequest:request];
+
     rightBar.value = rightBar.value + 1;
     [self performSelectorOnMainThread:@selector(next) withObject:nil waitUntilDone:NO];
 }
@@ -226,6 +237,14 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     [oldLayer addAnimation:slideOutAnimation forKey:@"position"];
 }
 
+- (void)didLose {
+    
+}
+
+- (void)didWin {
+    
+}
+
 - (void)dealloc {
     [activeCard release];
     [pitchDetector release];
@@ -249,10 +268,15 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     if (isJSON) {
         NSDictionary *messageDict = [message JSONValue];
         if (NSString *action = [messageDict objectForKey:@"action"]) {
-            NSNumber *newOpponentId = [messageDict objectForKey:@"opponent_id"];
-            if (newOpponentId.intValue > 0) {
-                opponentId = [newOpponentId retain];
-                [self opponentFound];
+            if ([action isEqualToString:@"game_update"]) {
+                NSNumber *newOpponentId = [[messageDict objectForKey:@"game"] objectForKey:@"opponent_id"];
+                if (newOpponentId.intValue > 0) {
+                    opponentId = [newOpponentId retain];
+                    [self opponentFound];
+                }
+            } else if([action isEqualToString:@"score_update"]) {
+                NSNumber *opponentScore = [[messageDict objectForKey:@"game"] objectForKey:(((NSNumber *)[gameResponse objectForKey:@"opponent_id"]).intValue ? @"losses": @"wins")];
+                leftBar.value = opponentScore.intValue;
             }
         }
     }

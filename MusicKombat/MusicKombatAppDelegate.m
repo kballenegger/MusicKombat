@@ -42,6 +42,7 @@
 
     self.apiConnection = [[[MKAPIConnection alloc] initWithDelegate:self] autorelease];
     MKAPIRequest *request = [[MKAPIRequest alloc] initWithSuffix:@"users/new"];
+    [request appendBodyArgumentKey:@"brandon" value:@"sucks_cock"]; // Fool stupid server into thinking it's a POST request
     [apiConnection sendRequest:request];
 }
 

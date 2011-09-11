@@ -62,6 +62,8 @@
 		9F6DF401141CE833003091DD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF3FB141CE833003091DD /* SBJsonWriter.m */; };
 		9F6DF40B141CE8A0003091DD /* CBTaggedURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DF40A141CE8A0003091DD /* CBTaggedURLConnection.m */; };
 		9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF41A141D0319003091DD /* MusicKombat.xib */; };
+		9F6DF424141D0A04003091DD /* music_kombat_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF423141D0A04003091DD /* music_kombat_icon.png */; };
+		9F6DF426141D0A1C003091DD /* music_kombat_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6DF425141D0A1C003091DD /* music_kombat_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		9F6DF409141CE8A0003091DD /* CBTaggedURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTaggedURLConnection.h; sourceTree = "<group>"; };
 		9F6DF40A141CE8A0003091DD /* CBTaggedURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTaggedURLConnection.m; sourceTree = "<group>"; };
 		9F6DF41A141D0319003091DD /* MusicKombat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicKombat.xib; sourceTree = "<group>"; };
+		9F6DF423141D0A04003091DD /* music_kombat_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = music_kombat_icon.png; path = ../music_kombat_icon.png; sourceTree = "<group>"; };
+		9F6DF425141D0A1C003091DD /* music_kombat_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_kombat_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		9F6DF32C141C225E003091DD = {
 			isa = PBXGroup;
 			children = (
+				9F6DF425141D0A1C003091DD /* music_kombat_icon.png */,
 				9F6DF393141C6885003091DD /* Pitch Detection */,
 				9F6DF361141C2653003091DD /* SocketIO */,
 				9F6DF386141C5AEF003091DD /* Other */,
@@ -257,6 +262,7 @@
 				9F6DF3CC141CD5A6003091DD /* ko_bar */,
 				9F6DF3B8141CCA4E003091DD /* notes */,
 				9F6DF3A9141C8428003091DD /* card.png */,
+				9F6DF423141D0A04003091DD /* music_kombat_icon.png */,
 				9F6DF36F141C45FB003091DD /* background.png */,
 			);
 			name = Resources;
@@ -418,6 +424,8 @@
 				9F6DF3DF141CD5A6003091DD /* right4.png in Resources */,
 				9F6DF3E0141CD5A6003091DD /* right5.png in Resources */,
 				9F6DF41B141D0319003091DD /* MusicKombat.xib in Resources */,
+				9F6DF424141D0A04003091DD /* music_kombat_icon.png in Resources */,
+				9F6DF426141D0A1C003091DD /* music_kombat_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

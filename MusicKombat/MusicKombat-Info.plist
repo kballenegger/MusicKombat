@@ -11,7 +11,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
-	<array/>
+	<array>
+		<string>music_kombat_icon.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.azuretalon.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -32,6 +34,8 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MusicKombat</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>UIStatusBarHidden</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
