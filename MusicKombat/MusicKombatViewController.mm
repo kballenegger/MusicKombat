@@ -56,6 +56,8 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     NSDictionary *gameResponse;
     
     BOOL gameOver;
+    
+    UIImageView *mainView;
 }
 
 
@@ -102,6 +104,9 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     [self.view addSubview:rightBar];
     
     level = 0;
+
+    mainView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"menu_screen"]];
+    [self.view addSubview:mainView];
 }
 
 - (void)startGame {
@@ -147,6 +152,19 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     
     [newView autorelease];
     self.activeCard = [card autorelease];
+    
+    
+    
+    CBContextualizedBasicAnimation *fadeOutAnimation = [CBContextualizedBasicAnimation animationWithKeyPath:@"opacity"];
+    fadeOutAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
+    fadeOutAnimation.toValue = [NSNumber numberWithFloat:0.0f];
+    fadeOutAnimation.duration = kMusicKombatDefaultAnimationDuration;
+    fadeOutAnimation.removedOnCompletion = NO;
+    fadeOutAnimation.fillMode = kCAFillModeForwards;
+    fadeOutAnimation.delegate = self;
+    fadeOutAnimation.context = mainView;
+    
+    [mainView.layer addAnimation:fadeOutAnimation forKey:@"opacity"];
 }
 
 - (void)didFailToReceiveAPIResponseForRequest:(MKAPIRequest *)request {
@@ -332,7 +350,10 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     
     if ([contextualizedAnimation.context isKindOfClass:[Card class]]) {
         [(Card *)contextualizedAnimation.context release];
+    } else if ([contextualizedAnimation.context isKindOfClass:[UIView class]]) {
+        [(UIView *)contextualizedAnimation.context removeFromSuperview];
     }
+
 }
 
 - (void)viewDidUnload {
