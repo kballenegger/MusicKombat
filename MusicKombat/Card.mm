@@ -28,9 +28,9 @@
 
 @synthesize delegate, cardView;
 
-- (id)initWithCardView:(CardView *)_cardView {
+- (id)initWithCardView:(CardView *)_cardView  notes:(int *)notes {
     if (self = [super init]) {
-        notes_head = mk_stack_make(9, 7, 9, 7, MK_STACK_END);
+        notes_head = mk_stack_make(notes[3], notes[2], notes[1], notes[0], MK_STACK_END);
         noteViews = [[NSMutableArray alloc] init];
         cardView = _cardView;
 

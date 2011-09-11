@@ -19,6 +19,6 @@
 @property (nonatomic, assign) id <CardDelegate> delegate;
 @property (nonatomic, readonly) CardView *cardView;
 
-- (id)initWithCardView:(CardView *)cardView;
+- (id)initWithCardView:(CardView *)cardView notes:(int *)notes;
 
 @end

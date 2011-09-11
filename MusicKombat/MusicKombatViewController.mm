@@ -20,6 +20,17 @@
 #define kMusicKombatDefaultAnimationDuration 0.3555
 #define kMusicKombatCardFrame CGRectMake(24, 156, 972, 492)
 
+#define kMusicKombatNumberOfLevels 5
+
+static int levels [kMusicKombatNumberOfLevels] [4] = {
+    {9, 7, 9, 7},
+    {7, 7, 7, 7},
+    {9, 9, 9, 9},
+    {18, 18, 18, 18},
+    {9, 7, 9, 7}
+};
+
+
 @interface MusicKombatViewController () <MPDADelegateProtocol, CardDelegate> {
 @private
     UIProgressView *friendBar;
@@ -28,6 +39,8 @@
     Card *activeCard;
     
     AudioInput *pitchDetector;
+    
+    int level;
 }
 
 
@@ -44,6 +57,7 @@
 @synthesize foeBar;
 @synthesize activeCard;
 
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation); 
 }
@@ -52,13 +66,15 @@
     
     pitchDetector = [[AudioInput alloc] initWithDelegate:self];
     
+    level = 0;
+    int *notes = levels[level];
     
     // First card
     
     CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
     CALayer *newLayer = newView.layer;
 
-    Card *card = [[Card alloc] initWithCardView:newView];
+    Card *card = [[Card alloc] initWithCardView:newView notes:notes];
     card.delegate = self;
     
     CGPoint newToPosition = newView.center;
@@ -91,7 +107,11 @@
 
 - (void)next {
     
-    NSLog(@"moviinnng on");
+    level++;
+    if (level > kMusicKombatNumberOfLevels) {
+        // TODO: GAME OVER
+        return;
+    }
 
     Card *oldCard = [self.activeCard retain]; // Keep it around long enough for the animation to happen
     
@@ -103,7 +123,7 @@
     CardView *newView = [[CardView alloc] initWithFrame:kMusicKombatCardFrame];
     CALayer *newLayer = newView.layer;
 
-    Card *newCard = [[[Card alloc] initWithCardView:newView] autorelease];
+    Card *newCard = [[[Card alloc] initWithCardView:newView notes:levels[level]] autorelease];
     newCard.delegate = self;
     
     self.activeCard = newCard;
