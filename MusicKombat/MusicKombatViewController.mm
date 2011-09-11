@@ -12,6 +12,7 @@
 #import "CardView.h"
 #import "CBContextualizedBasicAnimation.h"
 #import "Card.h"
+#import "LifeBar.h"
 
 #import "AudioInput.h"
 
@@ -24,8 +25,8 @@
 
 static int levels [kMusicKombatNumberOfLevels] [4] = {
     {9, 7, 9, 7},
-    {7, 7, 7, 7},
-    {9, 9, 9, 9},
+    {16, 14, 16, 7},
+    {9, 14, 16, 9},
     {18, 18, 18, 18},
     {9, 7, 9, 7}
 };
@@ -33,19 +34,17 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 
 @interface MusicKombatViewController () <MPDADelegateProtocol, CardDelegate> {
 @private
-    UIProgressView *friendBar;
-    UIProgressView *foeBar;
-    
     Card *activeCard;
     
     AudioInput *pitchDetector;
+    
+    LifeBar *leftBar;
+    LifeBar *rightBar;
     
     int level;
 }
 
 
-@property (nonatomic, retain) IBOutlet UIProgressView *friendBar;
-@property (nonatomic, retain) IBOutlet UIProgressView *foeBar;
 @property (nonatomic, retain) IBOutlet Card *activeCard;
 
 - (void)next;
@@ -53,8 +52,6 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 @end
 
 @implementation MusicKombatViewController
-@synthesize friendBar;
-@synthesize foeBar;
 @synthesize activeCard;
 
 
@@ -65,6 +62,14 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 - (void)awakeFromNib {
     
     pitchDetector = [[AudioInput alloc] initWithDelegate:self];
+    
+    leftBar = [[LifeBar alloc] initWithFrame:CGRectMake(42, 52, 0, 0) isRight:NO];
+    rightBar = [[LifeBar alloc] initWithFrame:CGRectMake(569, 52, 0, 0) isRight:YES];
+    
+    [self.view addSubview:leftBar];
+    NSLog(@"frame %@", NSStringFromCGRect(leftBar.frame));
+    NSLog(@"frame %@", NSStringFromCGRect(rightBar.frame));
+    [self.view addSubview:rightBar];
     
     level = 0;
     int *notes = levels[level];
@@ -102,6 +107,8 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 }
 
 - (void)cardCompleted {
+    leftBar.value = leftBar.value + 1;
+    rightBar.value = rightBar.value + 1;
     [self performSelectorOnMainThread:@selector(next) withObject:nil waitUntilDone:NO];
 }
 
@@ -163,10 +170,10 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
 }
 
 - (void)dealloc {
-    [friendBar release];
-    [foeBar release];
     [activeCard release];
     [pitchDetector release];
+    [leftBar release];
+    [rightBar release];
     [super dealloc];
 }
 

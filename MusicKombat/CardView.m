@@ -10,8 +10,7 @@
 
 @implementation CardView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.clearsContextBeforeDrawing = YES;

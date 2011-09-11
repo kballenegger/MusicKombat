@@ -17,23 +17,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="1" id="5">
-                                <rect key="frame" x="20" y="20" width="150" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="1" id="4">
-                                <rect key="frame" x="854" y="20" width="150" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <connections>
-                        <outlet property="foeBar" destination="4" id="7"/>
-                        <outlet property="friendBar" destination="5" id="8"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-510" y="9"/>
