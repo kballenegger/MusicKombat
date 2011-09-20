@@ -18,7 +18,7 @@ int					SNAC_resamp_carry = 0;
 int					SNAC_resamp_factor = 2;
 int					SNAC_coordinate = 0;
 double				filtered_SNAC_results[SNAC_buf_length];
-const double		filtered_SNAC_filter_coeff = 0.1875;
+const double		filtered_SNAC_filter_coeff = 0.25;
 int					resamp_signal[256];
 
 Int32Cplx			SNAC_xXs[2][SNAC_buf_length];

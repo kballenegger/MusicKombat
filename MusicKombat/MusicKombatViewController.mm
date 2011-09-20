@@ -276,7 +276,7 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     fadeInAnimation.removedOnCompletion = NO;
     fadeInAnimation.fillMode = kCAFillModeForwards;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ziggy_win"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"robinson_win"]];
     [imageView.layer addAnimation:fadeInAnimation forKey:@"opacity"];
     [self.view addSubview:imageView];
 }
@@ -295,7 +295,7 @@ static int levels [kMusicKombatNumberOfLevels] [4] = {
     fadeInAnimation.removedOnCompletion = NO;
     fadeInAnimation.fillMode = kCAFillModeForwards;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"robinson_win"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ziggy_win"]];
     [imageView.layer addAnimation:fadeInAnimation forKey:@"opacity"];
     [self.view addSubview:imageView];
 }
